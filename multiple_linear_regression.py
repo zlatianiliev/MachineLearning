@@ -33,7 +33,7 @@ regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 
 # Add a column of ones in order to make the Multiple Linear Regression equation
-# (y = b0*1 +b1*x1+...+bn*xn) have a const b0 because the statsmodels lib doesn't include it
+# (y = b0*1 + b1*x1 + b2*x2 + ... + bn*xn) have a const b0 because the statsmodels lib doesn't include it
 X = np.append(arr = np.ones((50, 1)).astype(int), values = X, axis = 1)
 
 # Building the optimal model using Backward Elimination
