@@ -1,4 +1,4 @@
-#This repository contains examples of different Data Science concepts like:
+# This repository contains examples of different Data Science concepts like:
 
 1. Cleaning data
 2. Simple Linear Regression
