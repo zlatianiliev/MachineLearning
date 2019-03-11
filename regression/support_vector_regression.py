@@ -17,7 +17,7 @@ sc_y = StandardScaler()
 X = sc_X.fit_transform(X)
 y = sc_y.fit_transform(y)
 
-# Fitting Polynomial Linear Regression equation (y = b0 + b1*x1 + b2*x1^2 + ... + bn*x1^n)
+# Fitting Support Vector Regression equation (y = b0 + b1*x1 + b2*x1^2 + ... + bn*x1^n)
 regressor = SVR(kernel = 'rbf')
 regressor.fit(X, y)
 
