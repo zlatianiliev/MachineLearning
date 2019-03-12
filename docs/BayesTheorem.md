@@ -20,6 +20,7 @@
 
 ## Three representation: View this in non MD format*
 
+<pre>
             *
 Cancer 1% /   \ 99% No Cancer
          *     \
@@ -28,3 +29,4 @@ Cancer 1% /   \ 99% No Cancer
                   *
              10  / \  90%
                 +   -
+</pre>
