@@ -18,7 +18,7 @@
 
 ## P(Cancer|+) = P(+|Cancer) * P(Cancer) / P(+) = 0.9 * 0.01 / (0.01 * 0.9 + 0.99 * 0.1) = 8.33%
 
-## Three representation: View this in non MD format*
+## Three representation:
 
 <pre>
             *
