@@ -1,9 +1,27 @@
 # This repository contains examples of different Data Science concepts like:
 
+## Cleaning data
 1. Cleaning data
-2. Simple Linear Regression
-3. Multiple Linear Regression
-4. Polynomial Linear Regression
+
+## Regression
+1. Simple Linear Regression
+2. Multiple Linear Regression
+3. Polynomial Linear Regression
+4. Support Vector Regression
+5. Decision Tree Regression
+6. Random Forest Regression
+
+## Classification
+1. Logistic Regression
+2. Naive Bayes Classification
+3. Support Vector Classification
+4. Decision Tree Classification
+5. Random Forest Classification
+6. K Nearest Neighbor Classification
+
+## Clustering
+1. K Means Clustering
+2. Hierarchical Clustering
 
 ### In the data folder you can find all the csv files used for the different examples
 
