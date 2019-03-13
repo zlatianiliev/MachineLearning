@@ -26,4 +26,4 @@ plt.ylabel('Salary')
 plt.show()
 
 y_pred=regressor.predict(np.array([[6.5]]))
-print('Salary prediction with Random Forest for level 6.5: ', y_pred)
+print('Salary prediction with Decision Tree for level 6.5: ', y_pred)
