@@ -4,7 +4,6 @@ import pandas as pd
 
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
-import statsmodels.formula.api as sm
 
 # import dataset
 dataset = pd.read_csv('../data/Position_Salaries.csv')
