@@ -23,6 +23,11 @@
 1. K Means Clustering
 2. Hierarchical Clustering
 
+## Reinforcement learning
+1. Random selection
+2. Upper Confidence Bound
+3. Thompson Sampling
+
 ### In the data folder you can find all the csv files used for the different examples
 
 ## To make the different examples run use python 3.7
