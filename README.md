@@ -31,6 +31,10 @@
 ## Deep Learning
 1. Artificial Neural Network
 
+## Dimensionality reduction
+1. Principal Component Analysis
+2. Linear Discriminant Analysis
+
 ### In the data folder you can find all the csv files used for the different examples
 
 ## To make the different examples run use python 3.7
