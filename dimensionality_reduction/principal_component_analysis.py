@@ -37,36 +37,48 @@ y_pred = classifier.predict(X_test)
 # Making the Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
 
+# Printing the Accuracy, Precision, Recall and F1 Score
+# Accuracy = (TP + TN) / (TP + TN + FP + FN)
+# Precision = TP / (TP + FP)
+# Recall = TP / (TP + FN)
+# F1 Score = 2 * Precision * Recall / (Precision + Recall)
+
+total = cm[0][0] + cm[0][1] + cm[1][0] + cm[1][1]
+correctly_classified = cm[0][0] + cm[1][1]
+accuracy = correctly_classified / total
+print('Accuracy: ', accuracy)
+
+precision = cm[0][0] / (cm[0][0] + cm[0][1])
+print('Precision: ', precision)
+
+recall = cm[0][0] / (cm[0][0] + cm[1][0])
+print('Recall: ', recall)
+
+f1_score = 2 * precision * recall / (precision + recall)
+print('F1 Score: ', f1_score)
+
+
+def visualise(X_set, y_set, title):
+    X1, X2 = np.meshgrid(np.arange(start=X_set[:, 0].min() - 1, stop=X_set[:, 0].max() + 1, step=0.01),
+                         np.arange(start=X_set[:, 1].min() - 1, stop=X_set[:, 1].max() + 1, step=0.01))
+    plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),
+                 alpha=0.75, cmap=ListedColormap(('red', 'green', 'blue')))
+    plt.xlim(X1.min(), X1.max())
+    plt.ylim(X2.min(), X2.max())
+    for i, j in enumerate(np.unique(y_set)):
+        plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
+                    c=ListedColormap(('red', 'green', 'blue'))(i), label=j)
+    plt.title(title)
+    plt.xlabel('PC1')
+    plt.ylabel('PC2')
+    plt.legend()
+    plt.show()
+
+
 # Visualising the Training set results
 X_set, y_set = X_train, y_train
-X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
-                     np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
-plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green', 'blue')))
-plt.xlim(X1.min(), X1.max())
-plt.ylim(X2.min(), X2.max())
-for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('red', 'green', 'blue'))(i), label = j)
-plt.title('Logistic Regression (Training set)')
-plt.xlabel('PC1')
-plt.ylabel('PC2')
-plt.legend()
-plt.show()
+visualise(X_set, y_set, 'Logistic Regression (Test set)')
 
 # Visualising the Test set results
 X_set, y_set = X_test, y_test
-X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
-                     np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
-plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),
-             alpha = 0.75, cmap = ListedColormap(('red', 'green', 'blue')))
-plt.xlim(X1.min(), X1.max())
-plt.ylim(X2.min(), X2.max())
-for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('red', 'green', 'blue'))(i), label = j)
-plt.title('Logistic Regression (Test set)')
-plt.xlabel('PC1')
-plt.ylabel('PC2')
-plt.legend()
-plt.show()
+visualise(X_set, y_set, 'Logistic Regression (Training set)')
