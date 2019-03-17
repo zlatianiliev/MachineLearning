@@ -23,13 +23,16 @@
 1. K Means Clustering
 2. Hierarchical Clustering
 
-## Reinforcement learning
+## Reinforcement Learning
 1. Random selection
 2. Upper Confidence Bound
 3. Thompson Sampling
 
+## Deep Learning
+1. Artificial Neural Network
+
 ### In the data folder you can find all the csv files used for the different examples
 
 ## To make the different examples run use python 3.7
-### install the different libraries using `pip3 install <name_of_library>`
-### run the exmple by executing `python3 <name_of_file>`
+#### install the different libraries using `pip3 install <name_of_library>`
+#### run the exmple by executing `python3 <name_of_file>`
