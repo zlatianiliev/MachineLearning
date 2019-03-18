@@ -34,6 +34,10 @@
 ## Dimensionality reduction
 1. Principal Component Analysis
 2. Linear Discriminant Analysis
+2. Kernel Principal Component Analysis
+
+## Model Selection
+1. K Fold Cross Validation
 
 ### In the data folder you can find all the csv files used for the different examples
 
